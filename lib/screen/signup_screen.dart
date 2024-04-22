@@ -78,7 +78,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           text: privacyPolicy,
                           style: TextStyle(
                             fontFamily: bold,
-                            color: fontGrey,
+                            color: redcolor,
                           ))
                     ])),
                   )
