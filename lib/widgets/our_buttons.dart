@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_mart/consts/consts.dart';
 
-Widget ourButton({onpress, color, textcolor, String? title}) {
+Widget ourButton({onpress, color, String? title, Color? textcolor}) {
   return ElevatedButton(
       style: ElevatedButton.styleFrom(
           backgroundColor: blue, padding: const EdgeInsets.all(12)),

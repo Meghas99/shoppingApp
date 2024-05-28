@@ -9,3 +9,4 @@ const Color blue = Color.fromRGBO(50, 34, 168, 1);
 const Color black = Color.fromRGBO(29, 27, 23, 1);
 const Color purple = Color.fromRGBO(177, 11, 102, 1);
 const Color redcolor = Color.fromRGBO(174, 16, 37, 1);
+const Color golden = Color.fromRGBO(200, 171, 10, 1);

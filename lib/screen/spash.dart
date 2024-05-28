@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 // import 'package:get/get.dart';
-import 'package:shopping_mart/consts/colors.dart';
 import 'package:shopping_mart/consts/consts.dart';
+import 'package:shopping_mart/screen/homescreen/home.dart';
 import 'package:shopping_mart/screen/login/login_Screen.dart';
 import 'package:shopping_mart/widgets/applogo.dart';
 
@@ -18,8 +17,16 @@ class _SplashScreanState extends State<SplashScrean> {
 // Method to change screan
 
   changeScreen() {
-    Future.delayed(Duration(seconds: 3), () {
-      Get.to(() => LoginScreen());
+    Future.delayed(const Duration(seconds: 3), () {
+      // Get.to(() => LoginScreen());
+
+      auth.authStateChanges().listen((User? user) {
+        if (user == null && mounted) {
+          Get.to(() => const LoginScreen());
+        } else {
+          Get.to(() => const Home());
+        }
+      });
     });
   }
 
